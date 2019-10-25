@@ -1,4 +1,5 @@
 <img src="https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/AnacondaPython-_Install_mostov_v2_social.png?1527698443" alt="Image"/><br/>
+(this is achieved by the help of th author Lisa Tagliaferri)
 # How-to-install-Anaconda-in-Ubuntu-18.04
 
 # Introduction
