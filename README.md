@@ -188,12 +188,19 @@ Each environment you create with ```conda create``` will come with several defau
 -```pip```
 
 -```python```
+
 -```readline```
+
 -```setuptools```
+
 -```sqlite```
+
 -```tk```
+
 -```wheel```
+
 -```xz```
+
 -```zlib```
 
 You can add additional packages, such as ```numpy``` for example, with the following command:
