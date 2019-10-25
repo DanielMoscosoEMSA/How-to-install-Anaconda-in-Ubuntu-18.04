@@ -32,23 +32,27 @@ We can now verify the data integrity of the installer with cryptographic hash ve
 
 You’ll receive output that looks similar to this:
 
-Output
+Output: 
 ```45c851b7497cc14d5ca060064394569f724b67d9b5f98a926ed49b834a6bb73a  Anaconda3-2019.03-Linux-x86_64.sh```
+
 You should check the output against the hashes available at the Anaconda with Python 3 on 64-bit Linux page for your appropriate Anaconda version. As long as your output matches the hash displayed in the sha2561 row, you’re good to go.
 
 Now we can run the script:
 
-bash Anaconda3-2019.03-Linux-x86_64.sh
+```bash Anaconda3-2019.03-Linux-x86_64.sh```
+
 You’ll receive the following output:
 
-Output
-
+Output: 
+```
 Welcome to Anaconda3 2019.03
 
 In order to continue the installation process, please review the license
 agreement.
 Please, press ENTER to continue
->>> 
+>>>
+```
+
 Press ENTER to continue and then press ENTER to read through the license. Once you’re done reading the license, you’ll be prompted to approve the license terms:
 
 Output
