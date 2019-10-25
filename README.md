@@ -183,8 +183,10 @@ The asterisk indicates the current active environment.
 
 Each environment you create with ```conda create``` will come with several default packages:
 
--```openssl \n```
+-```openssl```
+
 -```pip```
+
 -```python```
 -```readline```
 -```setuptools```
