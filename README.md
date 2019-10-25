@@ -144,98 +144,118 @@ With your environment activated, your command prompt prefix will change:
 
 Within the environment, you can verify that you’re using the version of Python that you had intended to use:
 
-(my_env) someone@ubuntu:~$``` python --version```
+```(my_env) someone@ubuntu:~$ python --version```
 
-Output
+Output:
+```
 Python 3.7 :: Anaconda, Inc.
+```
+
 When you’re ready to deactivate your Anaconda environment, you can do so by typing:
 
-conda deactivate
+```(my_env) someone@ubuntu:~$ conda deactivate```
+
 Note that you can replace the word source with . to achieve the same results.
 
 To target a more specific version of Python, you can pass a specific version to the python argument, like 3.5, for example:
 
-conda create -n my_env35 python=3.5
+```conda create -n my_env35 python=3.5```
+
 You can update your version of Python along the same branch (as in updating Python 3.5.1 to Python 3.5.2) within a respective environment with the following command:
 
-conda update python
-If you would like to target a more specific version of Python, you can pass that to the python argument, as in python=3.3.2.
+```(my_env) someone@ubuntu:~$ conda update python```
+If you would like to target a more specific version of Python, you can pass that to the ```python``` argument, as in ```python=3.3.2```.
 
 You can inspect all of the environments you have set up with this command:
 
-conda info --envs
-Output
+```conda info --envs```
+
+Output:
+```
 # conda environments:
 #
 base                  *  /home/sammy/anaconda3
 my_env                   /home/sammy/anaconda3/envs/my_env
 my_env35                 /home/sammy/anaconda3/envs/my_env35
+```
 
 The asterisk indicates the current active environment.
 
-Each environment you create with conda create will come with several default packages:
+Each environment you create with ```conda create``` will come with several default packages:
 
-openssl
-pip
-python
-readline
-setuptools
-sqlite
-tk
-wheel
-xz
-zlib
-You can add additional packages, such as numpy for example, with the following command:
+-```openssl```
+-```pip```
+-```python```
+-```readline```
+-```setuptools```
+-```sqlite```
+-```tk```
+-```wheel```
+-```xz```
+-```zlib```
 
-conda install --name my_env35 numpy
+You can add additional packages, such as ```numpy``` for example, with the following command:
+
+```conda install --name my_env35 numpy```
+
 If you know you would like a numpy environment upon creation, you can target it in your conda create command:
 
-conda create --name my_env python=3 numpy
+```conda create --name my_env python=3 numpy```
+
 If you are no longer working on a specific project and have no further need for the associated environment, you can remove it. To do so, type the following:
 
-conda remove --name my_env35 --all
-Now, when you type the conda info --envs command, the environment that you removed will no longer be listed.
+```conda remove --name my_env35 --all```
 
-Updating Anaconda
+Now, when you type the ```conda info --envs``` command, the environment that you removed will no longer be listed.
+
+# Updating Anaconda
 You should regularly ensure that Anaconda is up-to-date so that you are working with all the latest package releases.
 
-To do this, you should first update the conda utility:
+To do this, you should first update the ```conda``` utility:
 
-conda update conda
+```conda update conda```
 When prompted to do so, type y to proceed with the update.
 
-Once the update of conda is complete, you can update the Anaconda distribution:
+Once the update of ```conda``` is complete, you can update the Anaconda distribution:
 
-conda update anaconda
-Again when prompted to do so, type y to proceed.
+```conda update anaconda```
 
-This will ensure that you are using the latest releases of conda and Anaconda.
+Again when prompted to do so, type ```y``` to proceed.
+
+This will ensure that you are using the latest releases of ```conda``` and Anaconda.
 
 Uninstalling Anaconda
-If you are no longer using Anaconda and find that you need to uninstall it, you should start with the anaconda-clean module, which will remove configuration files for when you uninstall Anaconda.
+If you are no longer using Anaconda and find that you need to uninstall it, you should start with the ```anaconda-clean``` module, which will remove configuration files for when you uninstall Anaconda.
 
-conda install anaconda-clean
+```conda install anaconda-clean```
+
 Type y when prompted to do so.
 
-Once it is installed, you can run the following command. You will be prompted to answer y before deleting each one. If you would prefer not to be prompted, add --yes to the end of your command:
+Once it is installed, you can run the following command. You will be prompted to answer y before deleting each one. If you would prefer not to be prompted, add ```--yes``` to the end of your command:
 
-anaconda-clean
+```anaconda-clean```
 This will also create a backup folder called .anaconda_backup in your home directory:
 
-Output
-Backup directory: /home/sammy/.anaconda_backup/2018-05-23T213826
+Output:
+```Backup directory: /home/sammy/.anaconda_backup/2018-05-23T213826```
+
 You can now remove your entire Anaconda directory by entering the following command:
 
-rm -rf ~/anaconda3
-Finally, you can remove the PATH line from your .bashrc file that Anaconda added. To do so, first open a text editor such as nano:
+```rm -rf ~/anaconda3```
 
-nano ~/.bashrc
-Then scroll down to the end of the file (if this is a recent install) or type CTRL + W to search for Anaconda. Delete or comment out the export PATH line:
+Finally, you can remove the PATH line from your ```.bashrc``` file that Anaconda added. To do so, first open a text editor such as nano:
 
+```nano ~/.bashrc```
+
+Then scroll down to the end of the file (if this is a recent install) or type ```CTRL + W``` to search for Anaconda. Delete or comment out the ```export PATH``` line:
+
+```
 /home/sammy/.bashrc
 ...
 # added by Anaconda3 installer
 export PATH="/home/sammy/anaconda3/bin:$PATH"
+```
+
 When you’re done editing the file, type CTRL + X to exit and y to save changes.
 
 Anaconda is now removed from your server.
