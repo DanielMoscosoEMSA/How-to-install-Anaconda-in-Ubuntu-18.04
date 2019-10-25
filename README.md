@@ -124,25 +124,28 @@ Anaconda virtual environments allow you to keep projects organized by Python ver
 
 First, we can check to see which versions of Python are available for us to use:
 
-```$ conda search "^python$"```
+```conda search "^python$"```
+
 You’ll receive output with the different versions of Python that you can target, including both Python 3 and Python 2 versions. Since we are using the Anaconda with Python 3 in this tutorial, you will have access only to the Python 3 versions of packages.
 
 Let’s create an environment using the most recent version of Python 3. We can achieve this by assigning version 3 to the python argument. We’ll call the environment my_env, but you’ll likely want to use a more descriptive name for your environment especially if you are using environments to access more than one version of Python.
 
-conda create --name my_env python=3
+```conda create --name my_env python=3```
+
 We’ll receive output with information about what is downloaded and which packages will be installed, and then be prompted to proceed with y or n. As long as you agree, type y.
 
-The conda utility will now fetch the packages for the environment and let you know when it’s complete.
+The ```conda``` utility will now fetch the packages for the environment and let you know when it’s complete.
 
 You can activate your new environment by typing the following:
 
-conda activate my_env
-With your environment activated, your command prompt prefix will change:
+```conda activate my_env```
 
+With your environment activated, your command prompt prefix will change:
 
 Within the environment, you can verify that you’re using the version of Python that you had intended to use:
 
- python --version
+(my_env) someone@ubuntu:~$``` python --version```
+
 Output
 Python 3.7 :: Anaconda, Inc.
 When you’re ready to deactivate your Anaconda environment, you can do so by typing:
