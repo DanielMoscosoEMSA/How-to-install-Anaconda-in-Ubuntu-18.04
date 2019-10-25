@@ -33,6 +33,7 @@ We can now verify the data integrity of the installer with cryptographic hash ve
 You’ll receive output that looks similar to this:
 
 Output: 
+
 ```45c851b7497cc14d5ca060064394569f724b67d9b5f98a926ed49b834a6bb73a  Anaconda3-2019.03-Linux-x86_64.sh```
 
 You should check the output against the hashes available at the Anaconda with Python 3 on 64-bit Linux page for your appropriate Anaconda version. As long as your output matches the hash displayed in the sha2561 row, you’re good to go.
@@ -55,13 +56,16 @@ Please, press ENTER to continue
 
 Press ENTER to continue and then press ENTER to read through the license. Once you’re done reading the license, you’ll be prompted to approve the license terms:
 
-Output
+Output:
+```
 Do you approve the license terms? [yes|no]
 As long as you agree, type yes.
+```
 
 At this point, you’ll be prompted to choose the location of the installation. You can press ENTER to accept the default location, or specify a different location to modify it.
 
-Output
+Output:
+```
 Anaconda3 will now be installed into this location:
 /home/sammy/anaconda3
 
@@ -69,32 +73,42 @@ Anaconda3 will now be installed into this location:
   - Press CTRL-C to abort the installation
   - Or specify a different location below
 
-[/home/sammy/anaconda3] >>> 
+[/home/sammy/anaconda3] >>>
+```
 The installation process will continue. Note that it may take some time.
 
 Once installation is complete, you’ll receive the following output:
 
-Output
+Output:
+```
 ...
 installation finished.
 Do you wish the installer to prepend the Anaconda3 install location
 to PATH in your /home/sammy/.bashrc ? [yes|no]
 [no] >>> 
-Type yes so that you can use the conda command. You’ll receive the following output next:
+```
 
-Output
+Type ```yes``` so that you can use the ```conda``` command. You’ll receive the following output next:
+
+Output:
+```
 Appending source /home/sammy/anaconda3/bin/activate to /home/sammy/.bashrc
 A backup will be made to: /home/sammy/.bashrc-anaconda3.bak
 ...
-You can now activate the installation by sourcing the ~/.bashrc file:
+```
 
-source ~/.bashrc
+You can now activate the installation by sourcing the ```~/.bashrc``` file:
+```source ~/.bashrc```
+
 Once you have done that, you can verify your install by making use of the conda command, for example with list:
 
-conda list
+```conda list```
+
 You’ll receive output of all the packages you have available through the Anaconda installation:
 
-Output
+
+Output:
+```
 # packages in environment at /home/sammy/anaconda3:
 #
 # Name                    Version                   Build  Channel
@@ -102,14 +116,15 @@ _ipyw_jlab_nb_ext_conf    0.1.0                    py37_0
 alabaster                 0.7.12                   py37_0  
 anaconda                  2019.03                  py37_0  
 ...
+```
 Now that Anaconda is installed, we can go on to setting up Anaconda environments.
 
-Setting Up Anaconda Environments
+# Setting Up Anaconda Environments
 Anaconda virtual environments allow you to keep projects organized by Python versions and packages needed. For each Anaconda environment you set up, you can specify which version of Python to use and can keep all of your related programming files together within that directory.
 
 First, we can check to see which versions of Python are available for us to use:
 
-conda search "^python$"
+```$ conda search "^python$"```
 You’ll receive output with the different versions of Python that you can target, including both Python 3 and Python 2 versions. Since we are using the Anaconda with Python 3 in this tutorial, you will have access only to the Python 3 versions of packages.
 
 Let’s create an environment using the most recent version of Python 3. We can achieve this by assigning version 3 to the python argument. We’ll call the environment my_env, but you’ll likely want to use a more descriptive name for your environment especially if you are using environments to access more than one version of Python.
