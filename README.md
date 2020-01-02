@@ -98,7 +98,7 @@ A backup will be made to: /home/sammy/.bashrc-anaconda3.bak
 ...
 ```
 
-You can now activate the installation by sourcing the ```~/.bashrc``` file:
+You can now activate the installation by sourcing the "~/.bashrc" file:
 ```source ~/.bashrc```
 
 Once you have done that, you can verify your install by making use of the conda command, for example with list:
