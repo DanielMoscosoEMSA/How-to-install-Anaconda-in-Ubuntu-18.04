@@ -120,6 +120,10 @@ anaconda                  2019.03                  py37_0
 ```
 Now that Anaconda is installed, we can go on to setting up Anaconda environments.
 
+At this point you should see something similar to this every time you open up a terminal: 
+```(base) twp@TrainingWheelsProtocol:/tmp$ ```
+BASE shows up because it is accessing what is referred as an "Enrionment"
+
 # Setting Up Anaconda Environments
 Anaconda virtual environments allow you to keep projects organized by Python versions and packages needed. For each Anaconda environment you set up, you can specify which version of Python to use and can keep all of your related programming files together within that directory.
 
