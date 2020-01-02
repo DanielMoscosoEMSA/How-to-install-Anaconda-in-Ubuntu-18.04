@@ -120,6 +120,7 @@ anaconda                  2019.03                  py37_0
 ```
 Now that Anaconda is installed, we can go on to setting up Anaconda environments.
 
+
 At this point you should see something similar to this every time you open up a terminal: 
 
 ```(base) twp@TrainingWheelsProtocol:~$```
