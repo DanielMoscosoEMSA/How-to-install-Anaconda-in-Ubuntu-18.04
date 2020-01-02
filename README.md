@@ -219,6 +219,10 @@ If you know you would like a numpy environment upon creation, you can target it 
 
 ```conda create --name my_env python=3 numpy```
 
+If you want to check what packages are installed in a specific environment, activate that environment and type:
+
+```conda create --name my_env python=3 numpy```
+
 If you are no longer working on a specific project and have no further need for the associated environment, you can remove it. To do so, type the following:
 
 ```conda remove --name my_env35 --all```
